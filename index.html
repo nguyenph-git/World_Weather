@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+  integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  
+  <!-- CSS file -->
+  <link rel="stylesheet" href="style_vis2.css" media="all">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <h1>Australian Average <span style="color: #FE7700"> Temperature</span>  and <span style="color: #00E3FE">Rainfall </span></h1>
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>How have Australia's weather conditions has change over the year</h2>
+        
+        <div class="block">
+          <div id="vis1" class="vis-container"></div>
+          <p>"Australian Capital Territory has the highest median weekly earnings, while Tasmania has the lowest."</p>
+        <h3>"State by State, Year by Year: Personal Income Trends"</h3>
+          <div id="vis2" class="vis-container"></div>
+          <p>"Personal income in Australia steadily increased from 2016 to 2020."</p>
+        </div>
+       
+        <h2>Analyzing Income Diversity: Gender, Industry, and Qualifications in Personal Earnings</h2>
+        <h3>"Pre-COVID-19 vs. Post-COVID-19: Australia's Personal Income Shift in Various Industries from 2017 to 2022"</h2>
+        <div class="block">
+          <div id="vis3" class="vis-container"></div>
+          <p>"Median weekly earnings showed significant growth from 2017 to 2022 across various industries."</p>
+          <h3>"Do Qualifications and Gender Contribute to Disparities in Personal Income?"</h3>
+          <div id="vis4" class="vis-container"></div>
+          <p>"Males earned more than females across various qualifications, with postgraduates earning the most."</p>
+        </div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+  </div> <!-- end page -->
+
+
+
+<script type="text/javascript">
+
+  var spec2 = "\Temp_map.vg.json";
+  var spec1 = "https://raw.githubusercontent.com/qngu0034/3179/main/linechart.json";
+  var spec3 = "https://raw.githubusercontent.com/qngu0034/3179/main/barchart.json";
+  var spec4 = "https://raw.githubusercontent.com/qngu0034/3179/main/groupedbar.json";
+  vegaEmbed('#vis2', spec1, { "actions": false });
+  vegaEmbed('#vis3', spec3, { "actions": false });
+  vegaEmbed('#vis4', spec4, { "actions": false });
+  vegaEmbed('#vis1', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
+</body>
+</html>

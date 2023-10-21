@@ -1,0 +1,76 @@
+{
+  
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+  
+  
+  
+  
+  "width": 400,
+  "height": 400,
+  "title": "Australia's Temperature",
+  "data": {
+    "url": "https://raw.githubusercontent.com/nguyenph-git/World_Weather/main/Data/weatherAUS_SA2.csv"
+  },
+
+  
+  "transform": [
+    {
+      "lookup": "state",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/nguyenph-git/World_Weather/main/Data/ne_10m_admin_1_states_provinces.json",
+          "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+        },
+        "key": "properties.name",
+        "fields": ["properties", "type", "geometry"]
+      }
+    },
+    {"filter": "datum.Date == year"}
+  ],
+  "params": [
+    {
+      "name": "year",
+      "value": 2008,
+      "bind": {
+        "input": "range",
+        "min": 2008,
+        "max": 2017,
+        "step": 1,
+        "name": "Select the year:"
+      }
+    }
+  ],
+  "vconcat":[{
+  "projection": {"type": "conicEqualArea"},
+  "mark": "geoshape",
+  "encoding": {
+    "color": {"field": "temp" , "type": "quantitative", "scale": {"domain": [15,35], "scheme": "browns" } },
+    "tooltip": [
+      {"field": "properties.name", "type": "nominal", "title": "state"},
+      {"field": "temp", "type": "quantitative"}
+    ]
+  }
+  },
+  {
+  "width": 400,
+  "height": 100,
+  "title": "Temperature distribution",
+    
+    "mark": "boxplot",
+    
+    "encoding": {
+      
+      "x": {"field": "temp", "type": "quantitative", "scale": {"zero": false}}
+
+    }
+  }
+
+
+
+
+
+
+  
+]
+}
