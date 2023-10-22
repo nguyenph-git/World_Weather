@@ -33,9 +33,9 @@
     }
   ],
   "vconcat":[{
-  "spacing": 200,
-  "width": 1000,
-  "height": 800,
+  
+  "width": 900,
+  "height": 600,
   "projection": {"type": "conicEqualArea"},
   "mark": "geoshape",
   "encoding": {
@@ -47,7 +47,7 @@
   }
 },
 {
-  "spacing": 200,
+  
   "width": 800,
   "height": 200,
   "title": "Australia rainfall distribution",
@@ -62,6 +62,7 @@
   }
   
 ],
-"spacing": 200
+"spacing": 100
 
 }
+

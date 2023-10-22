@@ -41,7 +41,7 @@
     }
   ],
   "vconcat":[{
-  "width": 700,
+  "width": 900,
   "height": 600,
   "projection": {"type": "conicEqualArea"},
   "mark": "geoshape",
@@ -54,8 +54,8 @@
   }
   },
   {
-  "width": 400,
-  "height": 100,
+  "width": 800,
+  "height": 200,
   "title": "Temperature distribution",
     
     "mark": "boxplot",
@@ -74,5 +74,5 @@
 
   
 ],
-"spacing": 200
+"spacing": 100
 }
