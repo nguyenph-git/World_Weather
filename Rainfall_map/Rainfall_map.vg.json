@@ -34,8 +34,8 @@
   ],
   "vconcat":[{
   
-  "width": 600,
-  "height": 300,
+  "width": 900,
+  "height": 600,
   "projection": {"type": "conicEqualArea"},
   "mark": "geoshape",
   "encoding": {
