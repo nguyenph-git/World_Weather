@@ -7,7 +7,7 @@
   
   
 
-  "title": "Australia's Temperature",
+  "title":{"text": "Australia Temperature Map", "fontSize": 30 },
   "data": {
     "url": "https://raw.githubusercontent.com/nguyenph-git/World_Weather/main/Data/weatherAUS_SA2.csv"
   },
@@ -47,7 +47,7 @@
   "mark": "geoshape",
   "encoding": {
     
-    "color": {"field": "temp" , "type": "quantitative", "scale": {"domain": [15,35], "scheme": "browns" }, "legend":{"title": "Celsius"} },
+    "color": {"field": "temp" , "type": "quantitative", "scale": {"domain": [15,35], "scheme": "browns" }, "legend":{"title": "Celsius", "labelFontSize":25} },
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "state"},
       {"field": "temp", "type": "quantitative"}
@@ -57,7 +57,8 @@
   {
   "width": 600,
   "height": 100,
-  "title": "Temperature distribution",
+  "title": { "text" : "Temperature distribution", "fontSize": 30, "align": "right"},
+  
   
     
     "mark": "boxplot",

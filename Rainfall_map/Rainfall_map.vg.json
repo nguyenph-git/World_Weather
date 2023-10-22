@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
 
-  "title":"Rainfall in australia",
+  "title":{"text": "Rainfall in Australia", "fontSize": 30 },
   "data": {
     "url": "https://raw.githubusercontent.com/nguyenph-git/World_Weather/main/Data/weatherAUS_SA2.csv"
   },
@@ -50,8 +50,8 @@
   
   "width": 600,
   "height": 100,
+  "title": { "text" : "Rainfall distribution", "fontSize": 30, "align": "right"},
   
-  "title": "Australia rainfall distribution",
     
     "mark": "boxplot",
     
