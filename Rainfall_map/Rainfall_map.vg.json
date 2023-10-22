@@ -34,35 +34,39 @@
   ],
   "vconcat":[{
   
-  "width": 900,
-  "height": 600,
+  "width": 600,
+  "height": 300,
   "projection": {"type": "conicEqualArea"},
   "mark": "geoshape",
   "encoding": {
-    "color": {"field": "rain" , "type": "quantitative", "scale": {"domain": [0,8], "scheme": "blues" } },
+    "color": {"field": "rain" , "type": "quantitative", "scale": {"domain": [0,8], "scheme": "blues" }, "legend":{"title": "mm per h"} } ,
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "state"},
       {"field": "rain", "type": "quantitative"}
     ]
-  }
-},
+  }},
+
 {
   
-  "width": 800,
-  "height": 200,
+  "width": 600,
+  "height": 100,
+  
   "title": "Australia rainfall distribution",
     
     "mark": "boxplot",
     
     "encoding": {
       
-      "x": {"field": "rain", "type": "quantitative", "scale": {"zero": false}}
-
+      "x": {"field": "rain" ,  "type": "quantitative", "scale": {"domain":[0,7]}, "title":"mm rain per h"  }
+    
     }
+    
+    
+     
   }
   
 ],
-"spacing": 100
+"spacing": 50
 
 }
 

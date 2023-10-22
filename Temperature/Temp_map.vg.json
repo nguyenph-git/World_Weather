@@ -46,7 +46,8 @@
   "projection": {"type": "conicEqualArea"},
   "mark": "geoshape",
   "encoding": {
-    "color": {"field": "temp" , "type": "quantitative", "scale": {"domain": [15,35], "scheme": "browns" } },
+    
+    "color": {"field": "temp" , "type": "quantitative", "scale": {"domain": [15,35], "scheme": "browns" }, "legend":{"title": "Celsius"} },
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "state"},
       {"field": "temp", "type": "quantitative"}
@@ -54,15 +55,16 @@
   }
   },
   {
-  "width": 800,
-  "height": 200,
+  "width": 600,
+  "height": 100,
   "title": "Temperature distribution",
+  
     
     "mark": "boxplot",
     
     "encoding": {
       
-      "x": {"field": "temp", "type": "quantitative", "scale": {"zero": false}}
+      "x": {"field": "temp", "type": "quantitative", "scale": {"domain":[15, 35]}, "title":"Degree Celsius"}
 
     }
   }
