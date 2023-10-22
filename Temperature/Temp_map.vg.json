@@ -47,13 +47,13 @@
   "mark": "geoshape",
   "encoding": {
     
-    "color": {"field": "temp" , "type": "quantitative", "scale": {"domain": [15,35], "scheme": "browns" }, "legend":{"title": "Celsius", "labelFontSize":25} },
+    "color": {"field": "temp" , "type": "quantitative", "scale": {"domain": [15,35], "scheme": "browns" }, "legend":{"title": "Celsius"},
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "state"},
       {"field": "temp", "type": "quantitative"}
     ]
   }
-  },
+  }},
   {
   "width": 600,
   "height": 100,
