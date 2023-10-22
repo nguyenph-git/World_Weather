@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 300,
-  "height": 300,
+
   "title":"Rainfall in australia",
   "data": {
     "url": "https://raw.githubusercontent.com/nguyenph-git/World_Weather/main/Data/weatherAUS_SA2.csv"
@@ -34,6 +33,9 @@
     }
   ],
   "vconcat":[{
+  "spacing": 200,
+  "width": 700,
+  "height": 600,
   "projection": {"type": "conicEqualArea"},
   "mark": "geoshape",
   "encoding": {
@@ -45,7 +47,8 @@
   }
 },
 {
-  "width": 400,
+  "spacing": 200,
+  "width": 500,
   "height": 100,
   "title": "Australia rainfall distribution",
     
@@ -57,5 +60,8 @@
 
     }
   }
-]
+  
+],
+"spacing": 200
+
 }

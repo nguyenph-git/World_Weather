@@ -6,8 +6,7 @@
   
   
   
-  "width": 400,
-  "height": 400,
+
   "title": "Australia's Temperature",
   "data": {
     "url": "https://raw.githubusercontent.com/nguyenph-git/World_Weather/main/Data/weatherAUS_SA2.csv"
@@ -42,6 +41,8 @@
     }
   ],
   "vconcat":[{
+  "width": 700,
+  "height": 600,
   "projection": {"type": "conicEqualArea"},
   "mark": "geoshape",
   "encoding": {
@@ -72,5 +73,6 @@
 
 
   
-]
+],
+"spacing": 200
 }
